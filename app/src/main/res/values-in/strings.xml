@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FILM &amp; ACARA TV</string>
+    <string name="movie">FILM</string>
+    <string name="tvshow">ACARA TV</string>
+    <string name="favorite">FAVORIT</string>
+    <string name="release">Tanggal Rilis</string>
+    <string name="language">Bahasa</string>
+    <string name="select_language">Pilih Bahasa</string>
+    <string name="language_preference">Pilihan Bahasa</string>
+    <string name="vote_average">Skor Pengguna</string>
+    <string name="runtime">Durasi</string>
+    <string name="genre">Genre</string>
+    <string name="description">Deskripsi</string>
+    <string name="budget">Budget</string>
+    <string name="revenue">Revenue</string>
+    <string name="user_score">User Score</string>
+    <string name="status">Status</string>
+    <string name="overview">Overview</string>
+    <string name="apikey_warning">ERROR: API KEY tidak dapat ditemukan!</string>
+    <string name="first_release">First Release</string>
+    <string name="success_remove_favorite">Favorit berhasil dihapus</string>
+    <string name="already_remove_favorite">Favorite telah dihapus</string>
+    <string name="already_on_favorite">Sudah ada di Favorite</string>
+    <string name="add_to_favorite">Ditambah ke Favorite</string>
+    <string name="favorite_movie">Favorit Film</string>
+    <string name="favorite_tvshow">Favorit Acara TV</string>
+    <string name="english">Inggris</string>
+</resources>

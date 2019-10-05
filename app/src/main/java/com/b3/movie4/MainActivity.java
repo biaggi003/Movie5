@@ -4,14 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -35,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
                 if (actionBar != null) {
                     actionBar.setElevation(4);
-                    actionBar.setSubtitle(R.string.movie);
                 }
                 return true;
             case R.id.navigation_tvshow:
@@ -45,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
                     if (actionBar != null) {
                         actionBar.setElevation(4);
-                        actionBar.setSubtitle(R.string.tvshow);
                     }
                     return true;
             case R.id.navigation_favorite:
@@ -55,7 +51,6 @@ public class MainActivity extends AppCompatActivity {
                         .commit();
                 if (actionBar != null) {
                     actionBar.setElevation(0);
-                    actionBar.setSubtitle(R.string.favorite);
                 }
                 return true;
         }

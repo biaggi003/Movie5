@@ -1,6 +1,5 @@
 package com.b3.movie4.database;
 
-import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;

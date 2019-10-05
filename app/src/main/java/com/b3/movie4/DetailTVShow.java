@@ -58,8 +58,7 @@ public class DetailTVShow extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setElevation(4);
-        actionBar.setTitle(R.string.tvshow);
-        actionBar.setSubtitle(tvShow.getName());
+        actionBar.setTitle(tvShow.getName());
 
         title.setText(Objects.requireNonNull(tvShow).getName());
         Glide.with(this)
@@ -87,8 +86,7 @@ public class DetailTVShow extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setElevation(4);
-        actionBar.setTitle(R.string.favorite_tvshow);
-        actionBar.setSubtitle(favoriteTVShow.getTitle());
+        actionBar.setTitle(favoriteTVShow.getTitle());
 
         title.setText(Objects.requireNonNull(favoriteTVShow).getTitle());
         Glide.with(this)

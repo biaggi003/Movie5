@@ -50,7 +50,6 @@ public class FavoriteMovieAdapter extends RecyclerView.Adapter<FavoriteMovieAdap
         movieViewHolder.release.setText(favoriteMovie.getRelease());
         Glide.with(context)
                 .load(favoriteMovie.getPosterPath())
-                .placeholder(R.color.colorPrimaryDark)
                 .into(movieViewHolder.photo);
         movieViewHolder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailMovie.class);

@@ -4,6 +4,7 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -58,8 +59,7 @@ public class DetailMovie extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setElevation(4);
-        actionBar.setTitle(R.string.movie);
-        actionBar.setSubtitle(movie.getTitle());
+        actionBar.setTitle(movie.getTitle());
 
         title.setText(Objects.requireNonNull(movie).getTitle());
         Glide.with(this)
@@ -88,8 +88,7 @@ public class DetailMovie extends AppCompatActivity {
 
         ActionBar actionBar = getSupportActionBar();
         Objects.requireNonNull(actionBar).setElevation(4);
-        actionBar.setTitle(R.string.favorite_movie);
-        actionBar.setSubtitle(favoriteMovie.getTitle());
+        actionBar.setTitle(favoriteMovie.getTitle());
 
         title.setText(Objects.requireNonNull(favoriteMovie).getTitle());
         Glide.with(this)
@@ -104,10 +103,10 @@ public class DetailMovie extends AppCompatActivity {
             if (isFavorite) {
                 helper.deleteFavorite(favoriteMovie.getId());
                 favoriteChecker(favoriteMovie.getId());
-                Toast.makeText(getApplicationContext(), R.string.success_remove_favorite, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.success_remove_favorite), Toast.LENGTH_SHORT).show();
             } else {
                 favoriteChecker(favoriteMovie.getId());
-                Toast.makeText(getApplicationContext(), R.string.already_remove_favorite, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), getResources().getString(R.string.already_remove_favorite), Toast.LENGTH_SHORT).show();
             }
         });
     }

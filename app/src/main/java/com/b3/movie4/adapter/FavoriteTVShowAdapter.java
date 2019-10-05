@@ -49,9 +49,7 @@ public class FavoriteTVShowAdapter extends RecyclerView.Adapter<FavoriteTVShowAd
         holder.release.setText(tvShow.getFirstAirDate());
         Glide.with(context)
                 .load(tvShow.getPoster())
-                .placeholder(R.color.colorPrimary)
                 .into(holder.poster);
-
         holder.itemView.setOnClickListener(v -> {
             Intent intent = new Intent(context, DetailTVShow.class);
             intent.putExtra(EXTRA_FAVORITE_TVSHOW, tvShow);

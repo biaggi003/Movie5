@@ -46,6 +46,12 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
         Glide.with(context)
                 .load(movieList.get(i).getPosterPath())
                 .into(holder.photo);
+        holder.itemView.setOnClickListener(v -> {
+            Movie movie = movieList.get(i);
+            Intent intent = new Intent(context, DetailMovie.class);
+            intent.putExtra(EXTRA_MOVIE, movie);
+            context.startActivity(intent);
+        });
     }
 
     @Override
@@ -64,15 +70,6 @@ public class MovieAdapter extends RecyclerView.Adapter<MovieAdapter.MovieViewHol
             rating = view.findViewById(R.id.item_rating);
             release = view.findViewById(R.id.item_release);
             photo = view.findViewById(R.id.item_photo);
-
-            view.setOnClickListener(v -> {
-                int q = getAdapterPosition();
-                Movie movie = movieList.get(q);
-                Intent intent = new Intent(context, DetailMovie.class);
-                intent.putExtra(EXTRA_MOVIE, movie);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intent);
-            });
         }
     }
 }

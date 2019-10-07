@@ -128,26 +128,6 @@ public class MainActivity extends AppCompatActivity {
         setLocale(language);
     }
     private void showSearchDialog() {
-        final SearchView searchView = new SearchView(MainActivity.this);
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            private Observer<ArrayList<Movie>> getSearch = new Observer<ArrayList<Movie>> {
-                @Override
-                public void onChanged(ArrayList<Movie> movies) {
-                    if (movies != null) {
-                        searchAdapter.setMovies(movies);
-                    }
-                }
-            };
-            @Override
-            public boolean onQueryTextSubmit(String s) {
-                return false;
             }
-
-            @Override
-            public boolean onQueryTextChange(String s) {
-                return false;
-            }
-        });
-
-    }
 }
+

@@ -5,4 +5,7 @@
         android:id="@+id/language_settings"
         android:title="@string/language_preference"
         app:showAsAction="never"/>
+    <item
+        android:id="@+id/search_bar"
+        android:title="@string/search"/>
 </menu>

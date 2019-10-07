@@ -13,10 +13,15 @@ import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.SearchView;
 
+import com.b3.movie4.model.Movie;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
 import java.util.Locale;
+import java.util.Observable;
+import java.util.Observer;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -81,6 +86,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId() == R.id.language_settings) {
             showLanguageSettingsDialog();
+        } else if (item.getItemId() == R.id.search_bar) {
+            showSearchDialog();
         }
         return super.onOptionsItemSelected(item);
     }
@@ -119,5 +126,28 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences sharedPreferences = getSharedPreferences("Settings", Activity.MODE_PRIVATE);
         String language = sharedPreferences.getString("App_Lang","");
         setLocale(language);
+    }
+    private void showSearchDialog() {
+        final SearchView searchView = new SearchView(MainActivity.this);
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            private Observer<ArrayList<Movie>> getSearch = new Observer<ArrayList<Movie>> {
+                @Override
+                public void onChanged(ArrayList<Movie> movies) {
+                    if (movies != null) {
+                        searchAdapter.setMovies(movies);
+                    }
+                }
+            };
+            @Override
+            public boolean onQueryTextSubmit(String s) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String s) {
+                return false;
+            }
+        });
+
     }
 }

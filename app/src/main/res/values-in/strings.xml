@@ -13,4 +13,7 @@
     <string name="already_remove_favorite">Favorite telah dihapus</string>
     <string name="already_on_favorite">Sudah ada di Favorite</string>
     <string name="add_to_favorite">Ditambah ke Favorite</string>
+    <string name="appwidget_text">FAVORIT SAYA</string>
+    <string name="add_widget">Tambah Widget</string>
+    <string name="empty_text">TIDAK ADA DATA</string>
 </resources>
